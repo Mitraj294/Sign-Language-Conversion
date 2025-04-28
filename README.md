@@ -221,3 +221,33 @@ Python libraries: OpenCV, NumPy, Keras,mediapipe,Tensorflow
 ![sequence2](https://user-images.githubusercontent.com/99630855/201490230-b903c365-7a4c-4972-8268-5687060b9cd0.png)
 
  
+
+
+Okay, here are the bash commands to run your main_app.py script with the different inputs you mentioned. These commands assume you are in the directory containing main_app.py (or you provide the full path to the script) and that you want to run in the default 'predict' mode with the GUI enabled.
+
+Run with Webcam 0:
+
+bash
+python main_app.py -i 0
+(Since '0' is the default input, you could also just run python main_app.py)
+
+Run with Webcam 1:
+
+bash
+python main_app.py -i 1
+Run with Webcam 2:
+
+bash
+python main_app.py -i 2
+Run with the video file:
+
+bash
+python main_app.py -i /home/digilab/Sign-Language-Conversion/media/video.mp4
+Run with the image file:
+
+bash
+python main_app.py -i /home/digilab/Sign-Language-Conversion/media/m.jpeg
+You can add other arguments like --mode collect or --gui off if needed for specific runs. For example, to run collection mode with webcam 1, starting with label 'B' and saving to a 'data' directory:
+
+bash
+python main_app.py -i 1 -m collect -o data -l B --gui off
